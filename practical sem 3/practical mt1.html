@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Inventory</title>
+  <style>
+    body { 
+      font-family: Arial; 
+      margin: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    input, button { margin: 5px; padding: 8px; }
+    form { text-align: center; }
+    button {
+      color: white;
+      background-color: #2563eb;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover { background-color: #1d4ed8; }
+    .edit-button { background-color: #f59e0b; }
+    .edit-button:hover { background-color: #d97706; }
+    .delete-button { background-color: #dc2626; }
+    .delete-button:hover { background-color: #b91c1c; }
+    table { border-collapse: collapse; margin-top: 20px; width: 100%; max-width: 800px; }
+    th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+  </style>
+</head>
+<body>
+  <h1>Product Inventory</h1>
+
+  <form id="productForm">
+    <input id="productId" type="number" placeholder="ID" required>
+    <input id="productName" type="text" placeholder="Product name" required>
+    <input id="productPrice" type="number" placeholder="Price" required>
+    <input id="productCategory" type="text" placeholder="Category" required>
+    <button type="submit" id="saveButton">Add Product</button>
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th><th>Name</th><th>Price</th><th>Category</th><th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="productList"></tbody>
+  </table>
+
+  <script src="./mt1.js"></script>
+</body>
+</html>
